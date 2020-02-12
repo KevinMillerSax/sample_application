@@ -30,7 +30,7 @@ RSpec.describe User, type: :model do
     it "should have a unique email address" do
       user = User.new(name: "user", email: "user@example.com").save
       user2 = User.new(name: "user2", email: "user@example.com").save
-      expect(user2.email).not_to eq(user.email)
+      expect(false).to eq(user) | (user2)
     end
 
     it "password should have a minimum length" do
